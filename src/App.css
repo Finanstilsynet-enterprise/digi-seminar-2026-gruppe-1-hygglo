@@ -1,0 +1,100 @@
+/* Workshop landing page styles */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+
+.header-organizer {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-h);
+}
+
+/* Main */
+.main {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Hero banner */
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Getting started */
+.getting-started {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.getting-started h2 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  color: var(--text-h);
+}
+
+.steps {
+  margin: 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.steps li {
+  color: var(--text);
+}
+
+.steps code {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.85em;
+  font-family: var(--mono);
+}
