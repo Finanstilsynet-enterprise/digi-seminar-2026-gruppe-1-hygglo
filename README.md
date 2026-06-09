@@ -16,22 +16,39 @@ Deltagerne velger én case å jobbe med i sin klon av repoet. Målet er å bruke
 
 Tips: Start med en liten MVP, få flyten til å virke ende-til-ende, og bruk AI til å skrive både kode og tester underveis.
 
-## Stack
-
-- **React** – UI-bibliotek
-- **Vite** – Bygge- og utviklingsverktøy
-- **TypeScript** – Typesikkerhet
-- **ESLint** – Linting
-- **Prettier** – Kodeformatering
 
 ## Kom i gang
+
+Prosjektet bruker **Node.js** til å kjøre utviklingsverktøyene lokalt, og **React** til å bygge brukergrensesnittet.
+
+- **Node.js**: Kjører kommandoene som installerer avhengigheter og starter utviklingsserveren.
+- **React**: Bygger komponentene og sidene i appen.
+
+Kjør disse kommandoene i terminalen:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Åpne [http://localhost:5173](http://localhost:5173) i nettleseren.
+- `npm install`: Laster ned alle pakker prosjektet trenger (fra `package.json`).
+- `npm run dev`: Starter Vite sin utviklingsserver med hot reload.
+
+Åpne [http://localhost:5173](http://localhost:5173) i nettleseren når serveren er startet.
+
+### Kjør prosjektet fra VS Code (UI)
+
+Du kan også starte prosjektet fra menyene i vscode. Konfigurasjonen for dette ligger i `.vscode/launch.json`.
+
+1. Åpne **Run and Debug** i VS Code (play-ikonet i venstremenyen).
+2. Velg **Start Vite Dev Server** i dropdown.
+3. Klikk **Start Debugging** (grønn play-knapp).
+4. Åpne [http://localhost:5173](http://localhost:5173) i nettleseren.
+
+For å stoppe serveren, trykk **Shift+F5** eller stopp-knappen i debug-panelet.
+
+
+
 
 ## Scripts
 
@@ -55,10 +72,10 @@ src/
 └── types/        # TypeScript-typer og grensesnitt
 ```
 
-## Workshop-tips
+## Stack
 
-- Bruk AI-verktøy (GitHub Copilot, ChatGPT, osv.) aktivt under utviklingen
-- Legg til nye komponenter i `src/components/`
-- Legg til nye sider i `src/pages/`
-- Bruk `src/mock/` for å simulere API-data
-- Definer felles typer i `src/types/`
+- **React** – UI-bibliotek
+- **Vite** – Bygge- og utviklingsverktøy
+- **TypeScript** – Typesikkerhet
+- **ESLint** – Linting
+- **Prettier** – Kodeformatering
