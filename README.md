@@ -100,4 +100,19 @@ git fetch upstream
 
 # Erstatt alt i ditt nye repo, med innholdet upstream
 git reset --hard upstream/main
+
+# Evt fjern case-mapper du ikke skal jobbe med
+
+# git rm -r case-1-utstyrsdeling
+# git rm -r case-2-rpg-spill
+# git rm -r case-3-escape-room
+# git rm -r case-4-sosial-portalen
+# git rm -r case-5-duolingo
+
+# Og skriv en commit-kommentar
+git commit -m "Remove obsolete repositories"
+
+# Push innholdet til github. Bruk -f for å overskrive eksisterende innhold
+git push -f
+
 ```
