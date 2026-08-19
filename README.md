@@ -79,3 +79,25 @@ src/
 - **TypeScript** – Typesikkerhet
 - **ESLint** – Linting
 - **Prettier** – Kodeformatering
+
+## Klone dette repoet?
+
+Når du skal klone dette repoet for å bruke til en case anbefaler jeg følgende:
+
+* Opprett et nytt repository i github. Under "Start with a template", velg
+    Finanstilsynet-enterprise/rp-template
+* Deretter gjør du følgende lokalt på din egen pc eller i codespaces:
+
+```bash
+# Klon ditt repo, med lenken under [Code] - knappen i github
+git clone https://github.com/Finanstilsynet-enterprise/[ditt-nye-fantastiske-repo]
+
+# Legg til templat-repoet som upstream repo
+git remote add upstream https://github.com/Finanstilsynet-enterprise/digi-seminar-ki-template.git
+
+# Hent filer fra upstream
+git fetch upstream
+
+# Erstatt alt i ditt nye repo, med innholdet upstream
+git reset --hard upstream/main
+```
