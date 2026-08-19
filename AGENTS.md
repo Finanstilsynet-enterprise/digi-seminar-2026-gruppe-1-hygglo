@@ -1,5 +1,14 @@
 # AGENTS.md
 
+## Language
+
+__Answer in the same language you are asked.__
+__Create gh issues in Norwegian, unless otherwise specified__
+__ALWAYS use english in programming code__
+__Use norwegian in user inteface text unless otherwise specified__
+__Use norwegian demo data unless otherwise specified__
+__Use english commit-messages__
+
 ## Project Overview
 
 This repository contains a workshop/demo application.
