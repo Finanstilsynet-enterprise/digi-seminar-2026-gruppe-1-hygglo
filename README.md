@@ -12,7 +12,7 @@ Deltagerne velger én case å jobbe med i sin klon av repoet. Målet er å bruke
 - [Case 2: Lag din egen tilsynsportal](case-2-tilsynsportal/README.md)
 - [Case 3: Chatbot mot veiledninger i Finanstilsynet](case-3-chatbot-veiledninger/README.md)
 - [Case 4: Sosial-portalen](case-4-sosial-portalen/README.md)
-- [Case 5: Egendefinert](case-5-egendefinert/README.md)
+- [Case 5: FT Duolingo](case-5-duolingo/README.md)
 
 Tips: Start med en liten MVP, få flyten til å virke ende-til-ende, og bruk AI til å skrive både kode og tester underveis.
 

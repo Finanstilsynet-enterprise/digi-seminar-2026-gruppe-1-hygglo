@@ -1,102 +1,169 @@
-# Gruppe 3 – Intern utstyrsdeling
+# Gruppe 5 – Duolingo
 
-**Digi avdelingsseminar 2026 · Hygglo-inspirert case**
+På avdelingsseminaret skal vi teste vibe coding, koding ved bruk av KI, i praksis. Målet er ikke å lage en perfekt løsning, men å oppleve hvordan vi raskt kan gå fra idé til prototype.
 
-På avdelingsseminaret skal vi teste vibe coding – koding ved bruk av KI – i praksis. Målet er ikke å lage en perfekt løsning, men å oppleve hvordan vi raskt kan gå fra idé til prototype.
+Det er 5 grupper som skal lage hver sin løsning på ca. én time. Hver gruppe er sammensatt med ganske lik kompetanse.
 
-Gruppene skal lage hver sin løsning på omtrent én time. Løsningen skal vises frem for de andre gruppene.
+Løsningen skal vises frem for de andre gruppene.
 
-## Gruppe 3
+## Gruppe 5
 
 | Rolle | Navn |
-|---|---|
-| Gruppeleder | Jonas |
-| Teknisk | Asad |
-| GitHub | Morten |
-| Deltaker | Anita |
-| Deltaker | Elin |
-| Deltaker | Lena |
-| Deltaker | Diana |
-| Deltaker | Jonsvein |
-| Deltaker | Aftab |
-| Deltaker | Andrew |
+|---------|---------|
+| Gruppeleder og teknisk (Data) | Clarisse |
+| Teknisk (Diginn) | Lema |
+| Deltaker med GitHub Copilot (IT) | Tom |
+| Deltaker (Digi-led) | Lone |
+| Deltaker (Data) | Jon Reidar |
+| Deltaker (Data) | Terje |
+| Deltager (Diginn) | Cathrine |
+| Deltager (Dokin) | Gitte |
+| Deltager (Dokin) | Øystein |
+| Deltager (IT) | Henning |
 
-## Om casen
+## Om Duolingo
 
-Lag en intern markedsplass der ansatte kan legge ut utstyr til utlån, søke i tilgjengelig utstyr og sende forespørsler om booking.
+Duolingo er en språkapp som gjør læring av språk enkel og spillbasert. Brukeren øver gjennom korte oppgaver, får umiddelbar tilbakemelding og samler poeng, nivåer og belønninger underveis.
 
-## Hvorfor denne casen
+Man benytter enkeltord og fraser, som kan bygges opp som:
 
-Casen har en tydelig brukerreise fra søk til booking, passer godt med React-komponenter og state-håndtering, og er enkel å bygge stegvis med AI-assistanse.
+- Hva betyr en forkortelse eller begrep
+- Hva er forkortelsen for
+- Hvem er direktør for
+- Hvor er Lone seksjonsleder (liste over seksjoner – velg riktig)
+- I Diginn er ___ seksjonsleder (liste over navn – velg riktig)
 
-## Forslag til MVP
+## Konsept
 
-- Listevisning av utstyrskort med tittel, kategori, lokasjon, eier og pris per dag
-- Søk med fritekst og filtrering på kategori
-- Detaljside for valgt utstyr
-- Enkel bookingflyt med datoer og validering
-- Lagring i localStorage
+Lag et læringsspill der ansatte kan øve på ord, forkortelser og begreper som brukes i Finanstilsynet.
 
-## Brukerhistorier
+### Forslag til navn
 
-- Som ansatt vil jeg se tilgjengelig utstyr slik at jeg kan finne noe å låne.
-- Som ansatt vil jeg filtrere på kategori slik at jeg finner relevant utstyr raskere.
-- Som ansatt vil jeg sende en bookingforespørsel slik at jeg kan reservere utstyr.
-- Som eier vil jeg se innkommende forespørsler slik at jeg kan godkjenne eller avslå.
+- FT-lingo
+- Tilsynslingo
+- Finlingo
 
 ## Verktøy
 
 - Copilot
 - GitHub Copilot
-- React og TypeScript
-- Vitest
-- localStorage
 
-## AI-prompter dere kan starte med
+## Tips
 
-- Lag issues for MVP-en og foreslå en enkel rekkefølge for implementeringen.
-- Lag demodata som dere tror kan trenges.
-- Lag TypeScript-typer for utstyr, booking og bruker.
-- Bygg en responsiv kort-grid med filtrering på kategori og fritekst.
-- Implementer bookingvalidering som hindrer overlappende datoer.
-- Skriv tester for filtrering og bookingregler med Vitest.
+- Lag korte spørsmål
+- Bruke poeng og streaks
+- Ulike oppgavetyper
+- Begrense antall begreper, eksempelvis:
+  - 5–10 regelverk (DORA, GDPR, CRR)
+  - Navn på ledere (kanskje starte med kun ledergruppen)
+  - 5–10 forkortelser (kun DIGI og seksjoner i DIGI)
+  - 5–10 IT-forkortelser (KI, RPA, ROS, DevOps, PMO o.l.)
+- Bruke KI til å foreslå forklaringer på vanskelige begreper i klart språk
+- Lage enkel grafikk, kanskje med Finn-Robert
 
-## Oppgaver som kan løses i par
+## Oppgaver som skal løses i par
 
-- **Par 1 – Jonas og Anita:** Startside, listevisning og koordinering av helheten.
-- **Par 2 – Asad og Aftab:** TypeScript-typer, demodata, state og localStorage.
-- **Par 3 – Morten og Andrew:** GitHub-oppsett, issues, integrasjon og tester.
-- **Par 4 – Elin og Lena:** Detaljside og bookingflyt med datovalg.
-- **Par 5 – Diana og Jonsvein:** Innkommende forespørsler, godkjenning/avslag og bookingvalidering.
+### Par 1 – Lema og Cathrine: Startside
 
-## Ferdig når
+- Tittel
+- Kort forklaring
+- Valg av nivå eller fagområde
+- Startknapp
 
-- Bruker kan finne utstyr, se detaljer og sende en bookingforespørsel.
-- Validering hindrer ugyldige og overlappende reservasjoner.
-- Viktige flyter er dekket av tester.
+### Par 2 – Jon Reidar og Øystein: Flervalgsoppgaver
+
+- Lage ulike former av spørsmål med svaralternativer
+- Eksempel: Hva står ROS for?
+
+### Par 3 – Gitte og Terje: Match ord og forklaring
+
+- Lage match-oppgaver (drag-and-drop, knapper eller nedtrekksmenyer)
+- Eksempel:
+  - KI → Kunstig intelligens
+
+### Par 4 – Tom og Henning: Poeng, streak og tilbakemelding
+
+- Poeng for riktig svar
+- Tilbakemelding ved feil svar
+- Streak for antall riktige svar på rad
+- Sluttscore
+
+### Par 5 – Clarisse og Lone: AI-forklaring og sluttside
+
+- Lag en funksjon som gir en enkel forklaring på et begrep
+- Eksempel: Forklar «WebSak» på en enkel måte for en nyansatt
+
+Sluttside med:
+
+- Score
+- Antall riktige
+- Forslag til hva man bør øve mer på
+- «Prøv igjen»-knapp
 
 ## Forberedelser
 
-- Avklar hvem som oppretter repository og første issues.
-- Bli enige om et minimum av kategorier og 6–10 demoelementer.
-- Hold første versjon enkel: få grunnflyten til å virke før dere legger til ekstra funksjoner.
-- Avtal korte integrasjonspunkter underveis, slik at delene kobles sammen tidlig.
+- Last ned Duolingo-appen (gratisversjon holder)
+- Forbered innhold i prompter – bruk Copilot til hjelp
+- Tenk ut idéer, men husk å holde det enkelt
+- Snakk med din partner i forkant
 
 ## Formel på gode prompter
 
+En god prompt kan bygges ved å definere:
+
 **Rolle + kontekst + mål + oppgave + krav + format + avgrensning**
 
-**Eksempel:** Du er en erfaren React- og TypeScript-utvikler. Vi lager en enkel intern markedsplass for utlån av utstyr. Lag en responsiv liste med utstyrskort, fritekstsøk og kategorifilter. Bruk TypeScript, hold komponentene små, bruk kun lokale demodata og forklar kort hvilke filer som opprettes.
+### Eksempel
 
-## Tips for vibe coding
+**Rolle:** Du er en erfaren utvikler og pedagogisk rådgiver.
 
-- Forklar hva dere bygger og hvem løsningen er for.
-- Beskriv brukerflyten og be om ett konkret resultat av gangen.
-- Oppgi tekniske rammer: React, TypeScript, localStorage og Vitest.
-- Be KI-en stille oppfølgingsspørsmål hvis noe er uklart.
-- Test, juster og be om forbedringer i korte runder.
-- Be KI-en holde løsningen enkel og unngå avanserte funksjoner før grunnflyten virker.
+**Kontekst:** Vi skal lage en enkel prototype på et læringsspill inspirert av Duolingo for ansatte i Finanstilsynet.
 
----
+**Mål:** Målet er at brukeren skal kunne øve på interne begreper og forkortelser.
 
-*Gruppe 3 · Intern utstyrsdeling · Digi avdelingsseminar 2026*
+**Oppgave:** Lag forslag til fem korte flervalgsoppgaver.
+
+**Krav:** Hvert spørsmål skal ha ett riktig svar og tre feil svaralternativer. Språket skal være enkelt og forståelig for ansatte uten teknisk bakgrunn.
+
+**Format:** Svar i en tabell med kolonnene spørsmål, riktig svar og feil svaralternativer.
+
+**Avgrensning:** Hold oppgavene korte og enkle, og lag bare innhold som passer til en første prototype.
+
+### Når dere skriver prompter, bør dere
+
+- Forklare hva dere prøver å lage
+- Si hvem løsningen er for
+- Be om ett konkret resultat av gangen
+- Gi eksempler hvis dere har det
+- Definere hvilke kilder/data den kan bruke (f.eks. Innsia, Finanstilsynet.no)
+- Be KI-en stille oppfølgingsspørsmål hvis noe er uklart
+- Be om enkelt språk
+- Be om forslag som kan bygges raskt
+- Be KI-en holde løsningen enkel
+- Teste, justere og be om forbedringer i flere runder
+
+## Vibe coding-formel
+
+For vibe coding fungerer prompter best når de er praktiske og iterative:
+
+> Hva jeg bygger + brukerflyt + ønsket funksjon + tekniske rammer + hva som skal skje når brukeren trykker/velger/skriver + hold det enkelt
+
+### Eksempel
+
+**Kontekst / hva jeg bygger:**
+Jeg bygger en enkel prototype på et læringsspill inspirert av Duolingo.
+
+**Mål / brukerflyt:**
+Brukeren skal få et spørsmål om et begrep fra Finanstilsynet, velge ett av fire svaralternativer og få umiddelbar tilbakemelding.
+
+**Oppgave / ønsket funksjon:**
+Lag en enkel løsning med HTML, CSS og JavaScript i én fil.
+
+**Krav:**
+Hold koden enkel og lett å forstå.
+
+**Format / tekniske rammer:**
+Først skal løsningen ha én startside, én oppgave og en sluttside med score.
+
+**Avgrensning:**
+Ikke legg til avanserte funksjoner før grunnflyten fungerer.
