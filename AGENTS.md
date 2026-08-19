@@ -22,6 +22,17 @@ Focus on:
 
 # Working Principles
 
+When creating issues:
+
+1. **How to create issues**: When asked to create issues/tasks, always create them as GitHub Issues (using `gh issue create`).
+2. **AI-ready description**: Write specific, clear instructions with a narrow scope so that an autonomous AI agent can read and implement it without confusion.
+3. **Structured & Actionable**: Each issue should cover:
+   - Clear requirements/MVP deliverables.
+   - Specific guidelines for creating realistic Norwegian-style mock data (names, terms).
+   - Expected TypeScript types.
+   - Specific testing requirements (Vitest/React Testing Library specs, expected test scenarios).
+4. **Independent Scopes**: Avoid overlap; keep tasks small and easily reviewable.
+
 When implementing issues:
 
 1. Fully read the issue before making changes.
