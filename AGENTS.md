@@ -7,7 +7,7 @@ This repository contains a workshop/demo application.
 The goal is to demonstrate AI-assisted software development, not to
 build a production-ready system.
 
-The application will be one of the following demo projects: 
+The application will be one of the following demo projects:
 * Finanstilsynet internal Hygglo sharing site
 
 Focus on:
@@ -178,23 +178,25 @@ Only extract reusable components when there is a clear need.
 
 ---
 
-# Git Practices
+# Git & GitHub Agent Workflow
 
-Prefer:
+This project is run as a workshop with untrained developers. As an AI agent, you must strictly follow this Git and GitHub workflow to help them manage their code correctly and autonomously:
 
-* small commits
-* focused changes
-* descriptive commit messages
-* always refer to issue: #<issue-nr>
+1. **Branch Management**:
+   - Before starting, if you are currently on the `main` branch, ensure `main` is updated (`git pull origin main`).
+   - Create and check out a dedicated feature branch for the task.
+   - If the task is tied to a GitHub issue, the branch name **must** contain the issue number as a prefix, e.g., `5-frontend-view` or `12-add-validation`.
 
-Examples:
+2. **Commits**:
+   - Add only the modified or newly created files relevant to the task (`git add <files>`).
+   - Write positive, clear, and descriptive commit messages.
+   - If handling a GitHub issue, you **must** reference the issue number in the commit message using parentheses, e.g., `feat: (#5) add simple frontend view` or `fix: (#12) prevent double booking`.
 
-feat: add equipment details page
-feat: add booking validation
-test: add reservation service tests
-fix: prevent double booking
+3. **Publishing & Pull Requests**:
+   - Push the branch to the remote repository using `git push -u origin HEAD`.
+   - Create a Pull Request (PR) on GitHub for the pushed branch immediately after pushing, using the provided PR creation tools or `gh pr create`.
 
-Avoid large mixed-purpose commits.
+Avoid committing directy to `main` or making multiple unrelated changes in a single branch. Keep the scope of the branch fully aligned with a single issue or task.
 
 ---
 
