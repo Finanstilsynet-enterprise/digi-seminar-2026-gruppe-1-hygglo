@@ -54,6 +54,12 @@ When implementing issues:
 
 ---
 
+# CICD / github workflows
+
+There __SHOULD__ be a github workflow to validate pull requests. If no workflow exists, create one! The workflows should run all tests defined for the project.
+
+---
+
 # Demo First
 
 This project is intended for workshops and demonstrations.
