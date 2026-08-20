@@ -22,6 +22,7 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 4. Keep changes small and reviewable
 5. Ensure the application builds successfully
 6. Run tests before completing work
+7. Comment on issue with implementation overview
 
 ---
 
@@ -43,6 +44,9 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 
 - Push the branch: `git push -u origin HEAD`
 - Create a Pull Request immediately after pushing using `gh pr create` or the PR tools
+- Single PR can resolve multiple issues
+- Closing the PR should close resolved issues
+- Update PR with implementation overview
 
 Never commit directly to `main`.
 

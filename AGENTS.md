@@ -21,8 +21,6 @@ Agent instructions for this repository. Read this file first, then follow links 
 
 A workshop/demo application to demonstrate AI-assisted software development.
 
-**Current project:** Finanstilsynet internal Hygglo sharing site
-
 **Goals:** rapid iteration · clear UX · realistic demo scenarios · maintainable code
 
 ---
