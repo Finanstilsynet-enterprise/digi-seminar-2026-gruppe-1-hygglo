@@ -1,4 +1,5 @@
 {
   "name": "DIGI - seminar, KI Workshop",
-  "image": "mcr.microsoft.com/devcontainers/universal:5.1"
+  "image": "mcr.microsoft.com/devcontainers/universal:5.1",
+  "postCreateCommand": "bash .devcontainer/welcome.sh"
 }
