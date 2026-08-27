@@ -37,6 +37,25 @@ Before completing any issue:
 
 ---
 
+## Common Actions
+
+Usually end responses with this short menu, adapted to the current situation. If user asks for a menu (norsk meny), provide this. Add options appropriate to previous context:
+
+Text in parentheses like (`npm run dev`) is info to the agent. **Do not display menu content in (...) to the user**
+
+**Vanlige handlinger nå:**
+1. Se applikasjonen kjøre (`npm run dev`)
+2. Oppdater utviklingsmiljøet med endringer fra hovedbranch (`git stash && git pull && git stash pop`, og løs eventuelle konflikter)
+3. Oppdater hovedbranch med endringer fra utviklingsmiljøet (`git commit -m "<beskrivelse>" && git push -u origin HEAD`, og løs eventuelle feil)
+4. Løs en GitHub-issue
+
+- Treat a reply containing only a menu number as selecting that action.
+- Treat a reply such as `4. løs issue 13` as a request to solve issue 13, then read the complete issue before changing code.
+- Execute the selected action when possible. If it requires clarification, ask only for the missing information and keep the next step concrete.
+- Do not display the menu when it would distract from an urgent error, a requested concise answer, or a response that is already a final status update.
+
+---
+
 ## Detail Files
 
 | Topic | File |

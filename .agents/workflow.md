@@ -60,24 +60,6 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 - Do not leave merge conflicts, failed checks, or unfinished Git operations for the operator to solve alone. Diagnose the problem, propose the smallest appropriate fix, and verify the result.
 - When an operation could discard work or affect a shared branch, explain the impact and confirm the intended target before proceeding.
 
-### Common Actions
-
-Usually end responses with this short menu, adapted to the current situation:
-
-**Vanlige handlinger nå:**
-1. Se applikasjonen kjøre (`npm run dev`)
-2. Oppdater utviklingsmiljøet med endringer fra hovedbranch (`git stash && git pull && git stash pop`, og løs eventuelle konflikter)
-3. Oppdater hovedbranch med endringer fra utviklingsmiljøet (`git commit -m "<beskrivelse>" && git push -u origin HEAD`, og løs eventuelle feil)
-4. Løs en GitHub-issue
-
-- Treat a reply containing only a menu number as selecting that action.
-- Treat a reply such as `4. løs issue 13` as a request to solve issue 13, then read the complete issue before changing code.
-- Execute the selected action when possible. If it requires clarification, ask only for the missing information and keep the next step concrete.
-- Do not display the menu when it would distract from an urgent error, a requested concise answer, or a response that is already a final status update.
-- If user asks for a menu, provide this, and add options appropriate to previous context.
-- Start new chats by displaying the menu
-
-
 ---
 
 ## CI/CD
