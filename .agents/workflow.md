@@ -22,7 +22,7 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 4. Keep changes small and reviewable
 5. Ensure the application builds successfully
 6. Run tests before completing work
-7. Comment on issue with implementation overview
+7. Run all applicable linting and validation checks before completing work
 
 ---
 
@@ -31,8 +31,7 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 ### Branching
 
 - Ensure `main` is up to date before starting: `git pull origin main`
-- Create a dedicated feature branch for the task
-- If tied to a GitHub issue, prefix the branch name with the issue number: `5-frontend-view`, `12-add-validation`
+- Workshop work may be done directly on `main`; do not create a feature branch unless explicitly requested.
 
 ### Committing
 
@@ -42,13 +41,22 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 
 ### Publishing
 
-- Push the branch: `git push -u origin HEAD`
-- Create a Pull Request immediately after pushing using `gh pr create` or the PR tools
-- Single PR can resolve multiple issues
-- Closing the PR should close resolved issues
-- Update PR with implementation overview
+- Once all checks pass, commit the changes with a descriptive commit message and push them directly to the `main` branch.
+- If merge conflicts occur, the AI agent must inspect and resolve them before pushing. Ensure the final merged state still passes all linting and validation checks.
+- After the changes have been successfully pushed to `main`, update the issue status.
+- When updating the issue, include a concise summary of:
+	- What was changed.
+	- Any important implementation decisions.
+	- Which tests or validation checks were run.
+	- The final outcome/status of the issue.
+- An issue is not complete until the changes are pushed to `main` and the issue has been updated.
 
-Never commit directly to `main`.
+### Workshop Support
+
+- Assume that workshop operators may be inexperienced. Explain the next action clearly and provide step-by-step guidance when they need to run a command, review a change, resolve a conflict, or interpret a validation error.
+- The AI agent should perform available repository operations directly when possible, while briefly stating what it is doing and why.
+- Do not leave merge conflicts, failed checks, or unfinished Git operations for the operator to solve alone. Diagnose the problem, propose the smallest appropriate fix, and verify the result.
+
 
 ---
 
