@@ -34,6 +34,7 @@ Before completing any issue:
 - [ ] Tests pass
 - [ ] New functionality is covered by tests
 - [ ] No TypeScript errors
+- [ ] All code changes committed
 
 ---
 
