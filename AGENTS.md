@@ -46,7 +46,7 @@ Text in parentheses like (`npm run dev`) is info to the agent. **Do not display 
 **Vanlige handlinger nå:**
 1. Se applikasjonen kjøre (`npm run dev`)
 2. Oppdater utviklingsmiljøet med endringer fra hovedbranch (`git stash && git pull && git stash pop`, og løs eventuelle konflikter)
-3. Oppdater hovedbranch med endringer fra utviklingsmiljøet (`git commit -m "<beskrivelse>" && git push -u origin HEAD`, og løs eventuelle feil)
+3. Oppdater hovedbranch med endringer fra utviklingsmiljøet (`git commit -m "<beskrivelse>" && git pull origin main && git push origin main`, og løs eventuelle merge-konflikter sammen med brukeren)
 4. Løs en GitHub-issue
 
 - Treat a reply containing only a menu number as selecting that action.

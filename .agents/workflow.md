@@ -28,12 +28,12 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 
 ## Git & GitHub Workflow
 
+There is no pull request workflow in this project. All work is committed directly to `main` and pushed to `origin`.
+
 ### Branching
 
 - Ensure `main` is up to date before starting: `git pull origin main`
-- Workshop work may be done directly on `main`. Use feature branches if explicitly asked to do so.
-- Use the current working branch and its configured upstream branch for workshop work.
-- Create a dedicated feature branch for the task when appropriate.
+- Do all work directly on `main`. Do not create feature branches unless explicitly asked to do so.
 
 ### Committing
 
@@ -43,15 +43,16 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 
 ### Publishing
 
-- Once all checks pass, commit the changes with a descriptive commit message and push the current branch with `git push -u origin HEAD`.
-- If merge conflicts occur, the AI agent must inspect and resolve them before pushing. Ensure the final merged state still passes all linting and validation checks.
-- After the changes have been successfully pushed to the configured upstream branch, update the issue status. If the repository uses a pull request workflow, update the issue after the change is merged to `main`.
+- Once all checks pass, commit the changes on `main` with a descriptive commit message and push directly with `git push origin main`.
+- Before pushing, run `git pull origin main` to catch any changes made in the meantime and reduce the risk of conflicts.
+- If merge conflicts occur, the AI agent must inspect and resolve them together with the user before pushing. Explain the conflicting changes in plain terms, propose the resolution, and confirm with the user before finalizing. Ensure the final merged state still passes all linting and validation checks.
+- After the changes have been successfully pushed to `main`, update the issue status and close it.
 - When updating the issue, include a concise summary of:
 	- What was changed.
 	- Any important implementation decisions.
 	- Which tests or validation checks were run.
 	- The final outcome/status of the issue.
-- An issue is not complete until the changes have been published to the configured workflow target and the issue has been updated.
+- An issue is not complete until the changes have been pushed to `main` and the issue has been updated.
 
 ### Workshop Support
 
@@ -59,13 +60,6 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 - The AI agent should perform available repository operations directly when possible, while briefly stating what it is doing and why.
 - Do not leave merge conflicts, failed checks, or unfinished Git operations for the operator to solve alone. Diagnose the problem, propose the smallest appropriate fix, and verify the result.
 - When an operation could discard work or affect a shared branch, explain the impact and confirm the intended target before proceeding.
-
----
-
-## CI/CD
-
-A GitHub Actions workflow **must** exist to validate pull requests by running all tests.
-If no workflow exists, create one.
 
 ---
 

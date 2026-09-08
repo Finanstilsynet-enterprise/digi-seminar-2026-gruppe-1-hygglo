@@ -119,4 +119,4 @@ koden oppdateres så de andre i teamet også kan bruke den.
 | GitHub Copilot | KI-kollega |
 | Prompt | Instruksjon |
 | Codespace | Kontor i skyen |
-| Pull request | Send til godkjenning |
+| Push | Send endringene dine til de andre |
