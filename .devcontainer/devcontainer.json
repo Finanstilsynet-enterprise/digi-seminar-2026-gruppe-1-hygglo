@@ -1,0 +1,5 @@
+{
+  "name": "DIGI - seminar, KI Workshop",
+  "image": "mcr.microsoft.com/devcontainers/universal:5.1",
+  "postCreateCommand": "sudo cp .devcontainer/welcome.sh /etc/profile.d/ && sudo chmod +x /etc/profile.d/welcome.sh"
+}
