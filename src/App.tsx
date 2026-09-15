@@ -1,8 +1,8 @@
 import './App.css'
-import { LandingPage } from './pages/LandingPage'
+import { EquipmentPage } from './pages/EquipmentPage'
 
 function App() {
-  return <LandingPage />
+  return <EquipmentPage />
 }
 
 export default App
