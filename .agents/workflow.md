@@ -12,6 +12,27 @@ Each issue must include:
 
 Keep issues narrowly scoped and non-overlapping so an AI agent can implement them without confusion.
 
+### Minimizing merge conflicts across parallel issues
+
+Since multiple groups may work on different issues at the same time, and all work is pushed
+directly to `main` without PRs, issues must be designed so groups can work in parallel with
+minimal risk of colliding edits:
+
+- **Give each issue an explicit file ownership list** ("Filer denne oppgaven eier"): the files
+  it is expected to create or modify. Prefer new files (new pages/components/services) over
+  edits to files another open issue also needs to touch.
+- **Extract shared contracts before splitting work.** If several issues need the same type,
+  route, or service function, define that shared contract (TypeScript type, route skeleton,
+  service function signature) once — in a prerequisite commit or the first issue touched —
+  so later issues only *call* it instead of *defining* it.
+- **Avoid having two open issues both edit the same "hub" file** (e.g. `App.tsx` routing,
+  a shared service, a shared type file) unless unavoidable. If it can't be avoided, keep the
+  edit additive (append a new route/function) rather than restructuring existing code.
+- **State dependencies explicitly.** If an issue truly depends on another, say so under
+  "Avhengigheter" and note that it can still be scaffolded with a placeholder/mock so it
+  doesn't block starting.
+- Prefer additive changes (new files, new functions) over edits to existing shared logic.
+
 ---
 
 ## Issue Implementation
@@ -20,9 +41,13 @@ Keep issues narrowly scoped and non-overlapping so an AI agent can implement the
 2. Implement only the requested scope — avoid unrelated refactoring
 3. Prefer simple solutions over clever ones
 4. Keep changes small and reviewable
-5. Ensure the application builds successfully
-6. Run tests before completing work
-7. Run all applicable linting and validation checks before completing work
+5. **Minimize merge-conflict risk as a starting principle:** stick to the files the issue says
+   it owns, prefer adding new files/functions over editing shared ones, and pull `main` right
+   before you start so you build on the latest shared contracts (types, routes, services)
+   other groups may have already added
+6. Ensure the application builds successfully
+7. Run tests before completing work
+8. Run all applicable linting and validation checks before completing work
 
 ---
 
