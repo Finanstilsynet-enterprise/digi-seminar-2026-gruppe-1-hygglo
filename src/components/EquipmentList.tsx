@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { EquipmentItem } from '../mock/equipmentData'
 
 interface EquipmentListProps {
@@ -12,7 +13,7 @@ export function EquipmentList({ items }: EquipmentListProps) {
   return (
     <div className="equipment-grid">
       {items.map((item) => (
-        <article key={item.id} className="equipment-card">
+        <Link key={item.id} to={`/utstyr/${item.id}`} className="equipment-card">
           <div className="equipment-card-header">
             <span className="equipment-category">{item.category}</span>
             <span className={`status-badge ${item.available ? 'available' : 'unavailable'}`}>
@@ -27,7 +28,7 @@ export function EquipmentList({ items }: EquipmentListProps) {
             <strong>{item.pricePerDay.toLocaleString('nb-NO')} kr</strong>
             <span>per dag</span>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   )

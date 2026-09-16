@@ -1,4 +1,19 @@
-import type { EquipmentItem } from '../mock/equipmentData'
+import { equipmentCatalog, type EquipmentItem } from '../mock/equipmentData'
+import { readFromStorage, writeToStorage } from './storage'
+
+const EQUIPMENT_STORAGE_KEY = 'hygglo:equipment-catalog'
+
+export function getEquipmentCatalog(): EquipmentItem[] {
+  return readFromStorage<EquipmentItem[]>(EQUIPMENT_STORAGE_KEY, equipmentCatalog)
+}
+
+export function saveEquipmentCatalog(items: EquipmentItem[]): void {
+  writeToStorage(EQUIPMENT_STORAGE_KEY, items)
+}
+
+export function getEquipmentById(id: string): EquipmentItem | undefined {
+  return getEquipmentCatalog().find((item) => item.id === id)
+}
 
 export function filterEquipment(
   items: EquipmentItem[],

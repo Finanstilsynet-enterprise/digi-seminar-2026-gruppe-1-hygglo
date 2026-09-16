@@ -1,15 +1,17 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { EquipmentList } from '../components/EquipmentList'
-import { categories, equipmentCatalog } from '../mock/equipmentData'
-import { filterEquipment } from '../services/equipmentService'
+import { categories } from '../mock/equipmentData'
+import { filterEquipment, getEquipmentCatalog } from '../services/equipmentService'
 
 export function EquipmentPage() {
   const [searchText, setSearchText] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('Alle')
+  const equipmentCatalog = useMemo(() => getEquipmentCatalog(), [])
 
   const filteredEquipment = useMemo(
     () => filterEquipment(equipmentCatalog, searchText, selectedCategory),
-    [searchText, selectedCategory],
+    [equipmentCatalog, searchText, selectedCategory],
   )
 
   return (
@@ -18,6 +20,9 @@ export function EquipmentPage() {
         <div>
           <p className="section-label">Internt utstyr</p>
           <h1>Finn utstyr du trenger</h1>
+          <Link to="/foresporsler" className="owner-link">
+            Se innkommende forespørsler
+          </Link>
         </div>
 
         <div className="filters">
