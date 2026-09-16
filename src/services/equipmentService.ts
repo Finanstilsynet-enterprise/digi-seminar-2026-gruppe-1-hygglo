@@ -15,6 +15,16 @@ export function getEquipmentById(id: string): EquipmentItem | undefined {
   return getEquipmentCatalog().find((item) => item.id === id)
 }
 
+// Used by the owner requests view (issue #11) when a booking request is approved or rejected.
+export function setEquipmentAvailability(id: string, available: boolean): EquipmentItem[] {
+  const items = getEquipmentCatalog().map((item) =>
+    item.id === id ? { ...item, available } : item,
+  )
+  saveEquipmentCatalog(items)
+
+  return items
+}
+
 export function filterEquipment(
   items: EquipmentItem[],
   searchText: string,
