@@ -9,6 +9,8 @@ export interface EquipmentItem {
   pricePerDay: number
   description: string
   available: boolean
+  imageUrl?: string
+  imageAlt?: string
 }
 
 export type EquipmentFilter = 'Alle' | EquipmentCategory

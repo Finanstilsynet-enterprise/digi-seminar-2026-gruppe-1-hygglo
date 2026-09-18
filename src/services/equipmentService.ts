@@ -1,4 +1,5 @@
-import { equipmentCatalog, type EquipmentItem } from '../mock/equipmentData'
+import { equipmentCatalog } from '../mock/equipmentData'
+import type { EquipmentItem } from '../types/equipment'
 import { readFromStorage, writeToStorage } from './storage'
 
 const EQUIPMENT_STORAGE_KEY = 'hygglo:equipment-catalog'
